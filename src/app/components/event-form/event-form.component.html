@@ -1,0 +1,13 @@
+<h1> Add a new Event </h1>
+<br>
+<a>Name:</a><br>
+<input #name>
+<br>
+<a>Description:</a><br>
+<input #description>
+<br>
+<a>Date:</a><br>
+<input #date>
+<br>
+<button (click)="addEvent(name.value, description.value, date.value)">Add</button>
+<p *ngIf="result">{{result.message}}</p>

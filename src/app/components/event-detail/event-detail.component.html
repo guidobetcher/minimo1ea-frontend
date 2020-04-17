@@ -1,0 +1,13 @@
+<h3>
+  <a [title]="event.name + ' details'" (click)="getEventDetails()">
+    {{event.name}}
+  </a>
+  <input *ngIf="modifyEvent" #newName>
+</h3>
+<div *ngIf="details">
+  <a (click)="modify()"> modify</a>
+  <p> Description: {{event.description}}</p>
+  <input *ngIf="modifyEvent" #newDescription>
+  <p> Date: {{event.date}} </p>
+  <input *ngIf="modifyEvent" #newDate>
+</div>
